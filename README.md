@@ -19,7 +19,8 @@ If you don't want to run the app you can download the base class and run it in y
 
 # Run in python only:
 
-Use ThermalCurve.py as your import for the class
+Use ThermalCurve.py as your import for the class.
+
 This code depends on the below libraries. It has been tested on the below versions only on a Windows 10 Machine:
 
 ```
@@ -45,15 +46,22 @@ c.graph() # This will plot the extracted data and will show the thermal model on
 ### FAQs:
 
 Q: How does it grab the datapoints?
+
 A: It is looking for pixels that are not black and white. All other colors will be used as a valid datapoint. Then it looks at each column and gets the mean location; this gets the center of the curve. It then saves the mean position in a new array. 
 
+
 Q: What if the curve is all in black and white?
+
 A: I find programs like MSPaint does a good job filing the curve with color and it does not accidentally fill the grid.
 
+
 Q: What if there are multiple lines and in black and white? 
+
 A: I find it easy to use programs like MSPaint to erase where the extra lines meet. Then fill the curve with a color.
 
+
 Q: What if the line isn't complete?
+
 A: I find it easy to edit the image to complete the line.
 
 ## License
