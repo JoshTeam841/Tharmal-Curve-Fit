@@ -8,14 +8,50 @@ If you don't want to run the app you can download the base class and run it in y
 
 # How to use:
 
-1) Snip a picture of 
+1) Snip a picture of the thermal you are trying to curve fit with your favorite screen snipping tool. Save it as a png file (No other format is supported):
+2) Open up ThermalCurve.exe:
+3) Select image:
+4) Set your X and Y axis limits as per the limits shown in the datasheet.
+5) If you want to limit the curve to a max C/W then change the clip field, otherwise make this number big:
+6) Push compute and the values will be generated:
+7) Push ok after. 
+8) Save your new model in LTspice file (.asc) and it will have new RC values updated in it along with a test circuit to see how you did.
 
+# Run in python only:
 
-
-This code depends on the below librarys. It has been tested on these versions only on a Windows 10 Machine:
+Use ThermalCurve.py as your import for the class
+This code depends on the below libraries. It has been tested on the below versions only on a Windows 10 Machine:
 
 python 3.7.7
 numpy 1.18.4
 scipy 1.4.1
 matplotlib 3.2.1
+
+How to use:
+
+from ThermalCurve import ThermalCurveFit
+c = ThermalCurveFit()
+c.setFileName('C:/smb.png') # some file path to the png image
+c.setYAxis(.1,1000) # use datasheet to set up the min and max value for Y axis
+c.setXAxis(.001,1000) # use datasheet to set up the min and max value for X axis
+c.setClip(200) # If you want to limit the max C/W then make then set to the value you want, otherwise make this larger than your max C/W
+c.compute() #This will print out .param values for each RC.
+
+c.graph() # This will plot the extracted data and will show the thermal model on top of it. 
+
+FAQs:
+
+Q: How does it grab the datapoints?
+A: It is looking for pixels that are not black and white. All other colors will be used as a valid datapoint. Then it looks at each column and gets the mean location; this gets the center of the curve. It then saves the mean position in a new array. 
+
+Q: What if the curve is all in black and white?
+A: I find programs like MSPaint does a good job filing the curve with color and it does not accidentally fill the grid.
+
+Q: What if there are multiple lines and in black and white? 
+A: I find it easy to use programs like MSPaint to erase where the extra lines meet. Then fill the curve with a color.
+
+Q: What if the line isn't complete?
+A: I find it easy to edit the image to complete the line.
+
+
 
