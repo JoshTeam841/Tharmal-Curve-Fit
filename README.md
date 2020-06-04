@@ -27,8 +27,8 @@ numpy 1.18.4
 scipy 1.4.1
 matplotlib 3.2.1
 
-How to use:
-
+###How to use:
+```
 from ThermalCurve import ThermalCurveFit
 c = ThermalCurveFit()
 c.setFileName('C:/smb.png') # some file path to the png image
@@ -38,8 +38,9 @@ c.setClip(200) # If you want to limit the max C/W then make then set to the valu
 c.compute() #This will print out .param values for each RC.
 
 c.graph() # This will plot the extracted data and will show the thermal model on top of it. 
+```
 
-FAQs:
+###FAQs:
 
 Q: How does it grab the datapoints?
 A: It is looking for pixels that are not black and white. All other colors will be used as a valid datapoint. Then it looks at each column and gets the mean location; this gets the center of the curve. It then saves the mean position in a new array. 
@@ -53,5 +54,6 @@ A: I find it easy to use programs like MSPaint to erase where the extra lines me
 Q: What if the line isn't complete?
 A: I find it easy to edit the image to complete the line.
 
+## License
 
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
