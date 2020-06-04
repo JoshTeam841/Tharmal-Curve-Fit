@@ -14,8 +14,8 @@ If you don't want to run the app you can download the base class and run it in y
 4) Set your X and Y axis limits as per the limits shown in the datasheet in the text fields.
 5) If you want to limit the curve to a max C/W then change the clip field, otherwise make this number big.
 6) Push "Compute" button and the values will be generated.
-7) Pop up message with RC values available for you to review.
-8) Push "OK" or "Cancel" button after you are done reviewing the RC values. The bottom graph will be updated.  
+7) A Pop-Up message with RC values available for you to review.
+8) Push "OK" or "Cancel" button after you are done reviewing the RC values. The Pop-Up will go away and the bottom graph will be updated.  
 9) Push "Save" button Save your new model in LTspice file (.asc) and it will have new RC values updated in it, along with a test circuit to see how you did.
 10) Push "Quit" button to close the App. 
 
