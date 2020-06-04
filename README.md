@@ -1,4 +1,4 @@
-# Tharmal-Curve-Fit
+# Thermal-Curve-Fit
 This App will take in a image from a thermal impedance curve of a datasheet and will convert it to a 4th order Foster RC thermal Model.
 
 Manually tuning a model takes a ton of time. This app will do it for you :)
