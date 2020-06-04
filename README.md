@@ -6,7 +6,7 @@ Manually tuning a model takes a ton of time. This app will do it for you :)
 If you don't want to run the app you can download the base class and run it in your favorite python environment. 
 
 
-# How to use:
+# How to use the App:
 
 1) Snip a picture of the thermal you are trying to curve fit with your favorite screen snipping tool. Save it as a png file (No other format is supported):
 2) Open up ThermalCurve.exe:
@@ -16,9 +16,10 @@ If you don't want to run the app you can download the base class and run it in y
 6) Push "Compute" button and the values will be generated:
 7) Pop up message with RC values available for you to review:
 8) Push "OK" or "Cancel" button after you are done reviewing the RC values. The bottom graph will be updated.  
-9) Push "Save Button" Save your new model in LTspice file (.asc) and it will have new RC values updated in it, along with a test circuit to see how you did.
+9) Push "Save" button Save your new model in LTspice file (.asc) and it will have new RC values updated in it, along with a test circuit to see how you did.
+10) Push "Quit" button to close the App. 
 
-# Run in python only:
+# Run in Python only:
 
 Use ThermalCurve.py as your import for the class.
 
