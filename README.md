@@ -21,7 +21,7 @@ If you don't want to run the app you can download the base class and run it in y
 ![App Pic](App_Pic.png)
 # Run in Python only:
 
-Use ThermalCurve.py as your import for the class.
+Use ThermalCurve.py as your module for the class.
 
 This code depends on the below libraries. It has been tested on the below versions only on a Windows 10 Machine:
 
@@ -39,7 +39,7 @@ c = ThermalCurveFit()
 c.setFileName('C:/smb.png') # some file path to the png image
 c.setYAxis(.1,1000) # use datasheet to set up the min and max value for Y axis
 c.setXAxis(.001,1000) # use datasheet to set up the min and max value for X axis
-c.setClip(200) # If you want to limit the max C/W then make then set to the value you want, otherwise make this larger than your max C/W
+c.setClip(200) # If you want to limit the max C/W then set to the value you want it limited to0, otherwise make this larger than your max C/W.
 c.compute() #This will print out .param values for each RC.
 
 c.graph() # This will plot the extracted data and will show the thermal model on top of it. 
