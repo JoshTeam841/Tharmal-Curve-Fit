@@ -18,7 +18,7 @@ If you don't want to run the app you can download the base class and run it in y
 8) Push "OK" or "Cancel" button after you are done reviewing the RC values. The Pop-Up will go away and the bottom graph will be updated.  
 9) Push "Save" button Save your new model in LTspice file (.asc) and it will have new RC values updated in it, along with a test circuit to see how you did.
 10) Push "Quit" button to close the App. 
-
+![App Pic](App_Pic.png)
 # Run in Python only:
 
 Use ThermalCurve.py as your import for the class.
